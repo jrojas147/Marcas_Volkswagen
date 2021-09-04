@@ -4,6 +4,7 @@
 .contenedor{
     display: grid;
     grid-template-columns: $margenContenido auto $margenContenido;
+    grid-template-columns: 5% auto 5%;
     background-color: white;
     @include Asmall(){
         grid-template-columns: $margenContenidoSmall auto $margenContenidoSmall;
@@ -11,26 +12,27 @@
     @include smallTablet(){
         grid-template-columns: $margenContenidoSmall auto $margenContenidoSmall;
     }
-    .contLogo{
+    .contLogo {
+      padding: 10px 0;
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      @include Asmall() {
         text-align: center;
-        padding: 10px 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+      }
 
-        @include tabletLaptop(){
-            text-align: left;
+      .logo {
+        width: 55px;
+        @include Asmall() {
+          width: 50px;
         }
-        img:first-child{
-            justify-self: left;   
+      }
+      .santander {
+        width: 120px;
+        align-self: center;
+        justify-self: right;
+        @include Asmall() {
+          width: 110px;
         }
-
-        img{
-            align-self: center;
-            justify-self: right;
-            width: 30%;
-            @include tabletLaptop(){
-                width: 30%;
-            }
-        }
+      }
     }
 }
