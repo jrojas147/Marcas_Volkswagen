@@ -54,7 +54,7 @@ div#check {
 }
 
 .santanderFinancing{
-  @include tabletLaptop(){
+
       display: grid;
       grid-template-columns: 25% 65%;
       text-align: justify;
@@ -70,6 +70,5 @@ div#check {
           font-size: 10px;
           }
       }
-  }
 }
 
